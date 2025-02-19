@@ -104,9 +104,11 @@
 /* 移动端响应式布局 */
 @media (max-width: 768px) {
     .projects-section {
-        height: 160vw;
-        padding-bottom: 0;
-        overflow: hidden; /* 确保内容不会溢出 */
+        height: 180vw; /* 增加高度，确保有足够空间 */
+        position: relative;
+        overflow: hidden;
+        margin-top: 0; /* 确保没有意外的边距 */
+        margin-bottom: 0;
     }
 
     .projects-grid {
@@ -114,60 +116,81 @@
         width: 100%;
         height: 100%;
         padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 使用网格布局 */
+        grid-template-rows: repeat(3, auto);
+        gap: 8px; /* 添加间距 */
     }
 
     /* Thematic Program 卡片 - 左上 */
     .project-card.thematic {
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 50%;
+        grid-column: 1;
+        grid-row: 1;
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: 60vw;
     }
 
     /* Latest News 卡片 - 右上 */
     .project-card.news {
-        top: 0;
-        right: 0;
-        width: 50%;
-        height: 48%;
+        grid-column: 2;
+        grid-row: 1;
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 60vw;
     }
 
     /* Publications 卡片 - 左下 */
     .project-card.publications {
-        top: 50%;
-        left: 0;
-        width: 50%;
-        height: 50%;
+        grid-column: 1;
+        grid-row: 2;
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: 60vw;
     }
 
     /* About the Foundation 卡片 - 底部中间 */
     .project-card.about {
-        bottom: 0;
-        left: 50%;
-        width: 25%;
-        height: 45%;
+        grid-column: 2;
+        grid-row: 2;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        height: 60vw;
     }
 
     /* Commodity 卡片 - 右下 */
     .project-card.commodity {
-        bottom: 0;
-        right: 0;
-        width: 25%;
-        height: 50%;
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        height: 50vw;
     }
 
     .project-card {
-        position: absolute;
+        position: relative; /* 改为相对定位 */
         margin: 0;
         transform-origin: center;
+        background-size: cover;
+        background-position: center;
     }
 
     .project-card h2 {
         font-size: 1rem;
         padding: 0 8px;
-        text-align: center; /* 确保文字居中 */
-        width: 100%; /* 确保文字不会溢出 */
-        position: relative; /* 确保文字在遮罩层之上 */
+        text-align: center;
+        width: 100%;
+        position: relative;
         z-index: 3;
     }
 
