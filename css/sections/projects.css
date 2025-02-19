@@ -106,6 +106,7 @@
     .projects-section {
         height: 160vw;
         padding-bottom: 0;
+        overflow: hidden; /* 确保内容不会溢出 */
     }
 
     .projects-grid {
@@ -128,15 +129,15 @@
         top: 0;
         right: 0;
         width: 50%;
-        height: 48%; /* 调整高度使底部正好碰到 Commodity 的顶部 */
+        height: 48%;
     }
 
     /* Publications 卡片 - 左下 */
     .project-card.publications {
-        top: 50%; /* 调整位置紧贴 Thematic Program 底部 */
+        top: 50%;
         left: 0;
         width: 50%;
-        height: 50%; /* 增加高度填满剩余空间 */
+        height: 50%;
     }
 
     /* About the Foundation 卡片 - 底部中间 */
@@ -152,20 +153,22 @@
         bottom: 0;
         right: 0;
         width: 25%;
-        height: 52%;
+        height: 50%;
     }
 
     .project-card {
         position: absolute;
         margin: 0;
         transform-origin: center;
-        background-size: cover;
-        background-position: center;
     }
 
     .project-card h2 {
         font-size: 1rem;
         padding: 0 8px;
+        text-align: center; /* 确保文字居中 */
+        width: 100%; /* 确保文字不会溢出 */
+        position: relative; /* 确保文字在遮罩层之上 */
+        z-index: 3;
     }
 
     .project-card:hover {
