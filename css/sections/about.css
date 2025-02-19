@@ -74,35 +74,43 @@
 /* 响应式设计 */
 @media (max-width: 768px) {
     .about-section {
-        padding: 48px 24px;
+        height: auto; /* 改为自适应高度，而不是固定高度 */
+        min-height: 100vh; /* 确保至少有一个屏幕高度 */
+        padding: 80px 24px; /* 增加上下内边距 */
     }
 
     .about-content {
         width: 100%;
+        margin: 0;
     }
 
-    .about-content .title {
-        font-size: 2rem;
-    }
-
-    .about-content .description {
-        font-size: 1rem;
-        margin-top: 24px;
-    }
-
+    /* 调整标题和描述的边距 */
     .about-section .subtitle,
     .about-section .title,
     .about-section .description {
-        margin-left: 32px;
-        margin-right: 32px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
     }
 
     .about-section .subtitle {
+        margin-top: 0;
         font-size: 0.875rem;
     }
 
+    .about-section .title {
+        margin-top: 16px;
+        font-size: 2rem;
+    }
+
     .about-section .description {
-        width: calc(100% - 64px);
+        margin-top: 24px;
+    }
+
+    .about-section .description p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 24px;
     }
 
     .more-info-btn {
