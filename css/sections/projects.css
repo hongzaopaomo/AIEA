@@ -104,11 +104,12 @@
 /* 移动端响应式布局 */
 @media (max-width: 768px) {
     .projects-section {
-        height: 180vw; /* 增加高度，确保有足够空间 */
+        height: 180vw;
         position: relative;
         overflow: hidden;
-        margin-top: 0; /* 确保没有意外的边距 */
+        margin-top: 0; /* 确保顶部没有额外间距 */
         margin-bottom: 0;
+        padding-top: 0; /* 移除顶部内边距 */
     }
 
     .projects-grid {
@@ -117,9 +118,9 @@
         height: 100%;
         padding: 0;
         display: grid;
-        grid-template-columns: 1fr 1fr; /* 使用网格布局 */
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, auto);
-        gap: 8px; /* 添加间距 */
+        gap: 4px; /* 减小卡片之间的间距 */
     }
 
     /* Thematic Program 卡片 - 左上 */
