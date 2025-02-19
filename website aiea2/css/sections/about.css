@@ -1,0 +1,95 @@
+/* About Section Styles */
+.about-section {
+    width: 100%;
+    height: 560px;
+    background-color: #fff;
+    position: relative;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 小标题样式 */
+.about-section .subtitle {
+    margin-left: 144px;
+    margin-top: 64px;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+/* 主标题样式 */
+.about-section .title {
+    margin-left: 144px;
+    margin-top: 16px;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+/* 描述文本区域 */
+.about-section .description {
+    margin-left: 144px;
+    margin-right: 144px;
+    margin-top: 32px;
+    width: calc(100% - 288px); /* 屏幕宽度 - 左边距144px - 右边距144px */
+}
+
+.about-section .description p {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #626262;
+    margin-bottom: 32px;
+    text-align: justify;
+    word-break: break-word;
+    white-space: normal;
+    text-justify: inter-word;
+}
+
+/* 更多资讯按钮 */
+.more-info-btn {
+    display: inline-block;
+    padding: 8px 32px;
+    background-color: transparent;
+    border: 2px solid #333;
+    border-radius: 16px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+}
+
+.more-info-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .about-section .subtitle,
+    .about-section .title,
+    .about-section .description {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+    .about-section .subtitle {
+        font-size: 0.875rem;
+    }
+
+    .about-section .description {
+        width: calc(100% - 64px);
+    }
+
+    .more-info-btn {
+        font-size: 1.1rem;
+        padding: 14px 28px;
+    }
+} 
