@@ -13,6 +13,9 @@ const nextConfig = {
       },
     ],
   },
+  // GitHub Pages 部署配置
+  output: 'export',
+  basePath: '/AIEA',
   // 安全配置
   reactStrictMode: true,
   // 允许跨域
