@@ -1,4 +1,10 @@
 {
+  "homepage": "https://hongzaopaomo.github.io/AIEA",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+
   "name": "aiea-react",
   "version": "0.1.0",
   "private": true,
