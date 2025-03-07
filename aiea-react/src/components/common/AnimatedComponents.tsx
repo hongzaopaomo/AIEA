@@ -128,7 +128,11 @@ export const ScrollReveal = ({ children, className = '', delay = 0 }: AnimationP
 );
 
 // 交错动画（用于列表项）
-export const StaggerContainer = ({ children, className = '' }: Omit<AnimationProps, 'delay'>) => (
+export const StaggerContainer = ({ 
+  children, 
+  className = '', 
+  staggerDelay = 0.15 
+}: Omit<AnimationProps, 'delay'> & { staggerDelay?: number }) => (
   <motion.div
     initial="hidden"
     animate="show"
@@ -138,7 +142,7 @@ export const StaggerContainer = ({ children, className = '' }: Omit<AnimationPro
       show: {
         opacity: 1,
         transition: {
-          staggerChildren: 0.15
+          staggerChildren: staggerDelay
         }
       }
     }}

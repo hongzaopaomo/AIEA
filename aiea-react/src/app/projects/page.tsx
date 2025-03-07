@@ -135,7 +135,7 @@ export default function ProjectsPage() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.1}>
+              <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProjects.map((project) => (
                   <StaggerItem key={project.id}>
                     <motion.div 
