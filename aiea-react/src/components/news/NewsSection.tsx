@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // 添加图片路径前缀
-const imagePrefix = process.env.NODE_ENV === 'production' ? '/AIEA' : '';
+const imagePrefix = '';
 
 const NewsSection = () => {
   return (

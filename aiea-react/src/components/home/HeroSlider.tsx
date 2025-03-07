@@ -77,8 +77,8 @@ const HeroSlider = () => {
     }, 500);
   };
 
-  // 首先添加图片路径前缀
-  const imagePrefix = process.env.NODE_ENV === 'production' ? '/AIEA' : '';
+  // 添加图片路径前缀
+  const imagePrefix = '';
 
   return (
     <section className="relative h-screen bg-black text-white">

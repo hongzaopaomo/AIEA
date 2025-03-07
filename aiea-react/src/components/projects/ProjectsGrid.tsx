@@ -35,7 +35,7 @@ const ProjectCard = ({ title, href, className = '', bgImage }: ProjectCardProps)
 
 const ProjectsGrid = () => {
   // 确保图片路径前缀正确
-  const imagePrefix = process.env.NODE_ENV === 'production' ? '/AIEA' : '';
+  const imagePrefix = '';
   
   return (
     <section className="py-24 bg-white">
