@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // 添加图片路径前缀
-const imagePrefix = '';
+const imagePrefix = process.env.ASSET_PREFIX || '';
 
 const AboutSection = () => {
   return (

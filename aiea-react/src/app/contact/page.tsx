@@ -8,7 +8,7 @@ import AnimatedLayout from '@/components/common/AnimatedLayout';
 import { FadeUp, FadeRight, FadeLeft } from '@/components/common/AnimatedComponents';
 
 // 添加图片路径前缀
-const imagePrefix = '';
+const imagePrefix = process.env.ASSET_PREFIX || '';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

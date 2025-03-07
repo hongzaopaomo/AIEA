@@ -6,7 +6,7 @@ import { FadeUp, FadeRight, FadeLeft, ScaleIn } from '@/components/common/Animat
 import { motion } from 'framer-motion';
 
 // 添加图片路径前缀
-const imagePrefix = '';
+const imagePrefix = process.env.ASSET_PREFIX || '';
 
 export default function AboutPage() {
   return (

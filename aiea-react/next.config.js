@@ -32,18 +32,18 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: [
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-          { key: 'Cache-Control', value: 'public, max-age=3600, must-revalidate' },
-        ],
-      },
-      {
-        source: '/images/(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=86400, must-revalidate' },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
         ],
       },
     ];
-  }
-}
+  },
+  // 环境变量
+  env: {
+    ASSET_PREFIX: '',
+  },
+};
 
 module.exports = nextConfig; 

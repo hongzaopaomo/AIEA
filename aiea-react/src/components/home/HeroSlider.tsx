@@ -78,7 +78,7 @@ const HeroSlider = () => {
   };
 
   // 添加图片路径前缀
-  const imagePrefix = '';
+  const imagePrefix = process.env.ASSET_PREFIX || '';
 
   return (
     <section className="relative h-screen bg-black text-white">
