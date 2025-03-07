@@ -6,7 +6,7 @@
     "start": "next start -p 3000",
     "export": "next build",
     "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out",
+    "deploy": "cp ./public/CNAME ./out/ && touch out/.nojekyll && gh-pages -d out",
     "lint": "next lint",
     "clean": "rm -rf .next node_modules/.cache"
   },
