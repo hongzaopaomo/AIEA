@@ -1,5 +1,5 @@
 {
-  "homepage": "https://hongzaopaomo.github.io/AIEA",
+  "homepage": "https://aieafoundation.org",
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",

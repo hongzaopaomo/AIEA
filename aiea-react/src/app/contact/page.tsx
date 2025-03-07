@@ -2,6 +2,13 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import AnimatedLayout from '@/components/common/AnimatedLayout';
+import { FadeUp, FadeRight, FadeLeft } from '@/components/common/AnimatedComponents';
+
+// 添加图片路径前缀
+const imagePrefix = process.env.NODE_ENV === 'production' ? '/AIEA' : '';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -178,13 +185,13 @@ export default function ContactPage() {
                 {/* 社交媒体图标 */}
                 <div className="flex space-x-4">
                   <a href="#" className="text-gray-600 hover:text-black transition-colors">
-                    <Image src="/images/twitter-icon.svg" alt="Twitter" width={24} height={24} />
+                    <Image src={`${imagePrefix}/images/twitter-icon.svg`} alt="Twitter" width={24} height={24} />
                   </a>
                   <a href="#" className="text-gray-600 hover:text-black transition-colors">
-                    <Image src="/images/instagram-icon.svg" alt="Instagram" width={24} height={24} />
+                    <Image src={`${imagePrefix}/images/instagram-icon.svg`} alt="Instagram" width={24} height={24} />
                   </a>
                   <a href="#" className="text-gray-600 hover:text-black transition-colors">
-                    <Image src="/images/youtube-icon.svg" alt="YouTube" width={24} height={24} />
+                    <Image src={`${imagePrefix}/images/youtube-icon.svg`} alt="YouTube" width={24} height={24} />
                   </a>
                 </div>
               </div>

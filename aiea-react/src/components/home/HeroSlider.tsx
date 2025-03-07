@@ -77,6 +77,9 @@ const HeroSlider = () => {
     }, 500);
   };
 
+  // 首先添加图片路径前缀
+  const imagePrefix = process.env.NODE_ENV === 'production' ? '/AIEA' : '';
+
   return (
     <section className="relative h-screen bg-black text-white">
       <div className="absolute inset-0 overflow-hidden">
@@ -130,7 +133,7 @@ const HeroSlider = () => {
         <Link href="#" className="text-white hover:text-gray-300 transition-colors">
           <span className="sr-only">YouTube</span>
           <Image 
-            src="/images/youtube-icon.svg" 
+            src={`${imagePrefix}/images/youtube-icon.svg`}
             alt="YouTube" 
             width={24} 
             height={24}
@@ -140,7 +143,7 @@ const HeroSlider = () => {
         <Link href="#" className="text-white hover:text-gray-300 transition-colors">
           <span className="sr-only">Instagram</span>
           <Image 
-            src="/images/instagram-icon.svg" 
+            src={`${imagePrefix}/images/instagram-icon.svg`}
             alt="Instagram" 
             width={24} 
             height={24}
@@ -150,7 +153,7 @@ const HeroSlider = () => {
         <Link href="#" className="text-white hover:text-gray-300 transition-colors">
           <span className="sr-only">Twitter</span>
           <Image 
-            src="/images/twitter-icon.svg" 
+            src={`${imagePrefix}/images/twitter-icon.svg`}
             alt="Twitter" 
             width={24} 
             height={24}

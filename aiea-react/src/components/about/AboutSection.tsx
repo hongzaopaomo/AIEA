@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+// 添加图片路径前缀
+const imagePrefix = process.env.NODE_ENV === 'production' ? '/AIEA' : '';
+
 const AboutSection = () => {
   return (
     <section className="py-24 bg-gray-50">
@@ -30,7 +33,7 @@ const AboutSection = () => {
           <div className="relative">
             <div className="aspect-[4/5] relative rounded-lg overflow-hidden">
               <Image
-                src="/images/about.jpg"
+                src={`${imagePrefix}/images/about.jpg`}
                 alt="About AIEA Art Foundation"
                 fill
                 className="object-cover"

@@ -3,6 +3,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import AnimatedLayout from '@/components/common/AnimatedLayout';
+import { FadeUp, StaggerContainer, StaggerItem, ScaleIn } from '@/components/common/AnimatedComponents';
 
 interface Publication {
   id: number;
@@ -18,62 +21,62 @@ interface Publication {
 const publications: Publication[] = [
   {
     id: 1,
-    title: 'Contemporary African Art: Trends and Perspectives',
-    author: 'Dr. Nkechi Afolabi',
-    type: 'Book',
+    title: 'AIEA 艺术年鉴 2023',
+    author: 'AIEA 艺术基金会',
+    type: '年鉴',
     year: 2023,
-    description: 'An in-depth exploration of contemporary African artistic movements, featuring interviews with leading artists and curators from across the continent.',
-    image: '/images/publications.jpg',
+    description: '全面总结2023年AIEA艺术基金会的活动、展览和项目，包括艺术家采访和评论文章。',
+    image: '/AIEA/images/publications.jpg',
     isDigital: true
   },
   {
     id: 2,
-    title: 'Preserving Cultural Heritage Through Art',
-    author: 'Prof. Samuel Osei',
-    type: 'Journal',
-    year: 2023,
-    description: 'A scholarly examination of how artists are working to preserve and celebrate African cultural heritage through various artistic mediums.',
-    image: '/images/about.jpg',
+    title: '当代艺术中的身份与记忆',
+    author: '李明华',
+    type: '研究',
+    year: 2022,
+    description: '探讨当代艺术如何处理身份、记忆和文化遗产的问题，以AIEA支持的艺术家作品为例。',
+    image: '/AIEA/images/about.jpg',
     isDigital: true
   },
   {
     id: 3,
-    title: 'The New Generation: Emerging African Artists',
-    author: 'AIEA Art Foundation',
-    type: 'Exhibition Catalog',
+    title: '破碎与重构：后疫情时代的艺术创作',
+    author: '张艺谋, 王家卫, 娄烨',
+    type: '访谈',
     year: 2022,
-    description: 'A beautifully illustrated catalog documenting the groundbreaking exhibition that showcased the work of 30 emerging artists from 15 African countries.',
-    image: '/images/thematic-program.jpg',
+    description: '收录三位著名导演关于疫情如何影响他们创作视角和方法的对谈录。',
+    image: '/AIEA/images/thematic-program.jpg',
     isDigital: false
   },
   {
     id: 4,
-    title: 'Digital Frontiers: Technology and African Art',
-    author: 'Fatima El-Bashir',
-    type: 'Report',
-    year: 2022,
-    description: 'An exploration of how digital technologies are transforming the creation, distribution, and experience of African art in the 21st century.',
-    image: '/images/latest-news.jpg',
+    title: '艺术数字化：机遇与挑战',
+    author: '陈志远',
+    type: '研究',
+    year: 2023,
+    description: '研究NFT和数字艺术对传统艺术市场的影响，以及AIEA在数字艺术领域的探索。',
+    image: '/AIEA/images/latest-news.jpg',
     isDigital: true
   },
   {
     id: 5,
-    title: 'Art Education in Africa: Challenges and Opportunities',
-    author: 'Dr. Jean-Pierre Kouassi',
-    type: 'Research Paper',
+    title: '社区参与艺术指南',
+    author: 'AIEA 艺术教育部',
+    type: '指南',
     year: 2021,
-    description: 'A comprehensive analysis of the state of art education across African countries, with case studies and recommendations for improvement.',
-    image: '/images/promote-art-education.jpg',
+    description: '为艺术教育工作者提供的实用指南，分享AIEA社区艺术项目的经验和方法。',
+    image: '/AIEA/images/promote-art-education.jpg',
     isDigital: true
   },
   {
     id: 6,
-    title: 'Voices from the Diaspora: African Artists Abroad',
-    author: 'Maya Washington & Kofi Mensah',
-    type: 'Book',
-    year: 2021,
-    description: 'A collection of essays and artworks exploring the experiences and perspectives of African artists living and working in the diaspora.',
-    image: '/images/connect-art-community.jpg',
+    title: '艺术市场趋势报告 2023',
+    author: 'AIEA 研究团队',
+    type: '报告',
+    year: 2023,
+    description: '分析当前艺术市场趋势、收藏热点和投资机会，为艺术爱好者和收藏家提供参考。',
+    image: '/AIEA/images/connect-art-community.jpg',
     isDigital: false
   }
 ];

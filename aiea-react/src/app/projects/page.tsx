@@ -22,7 +22,7 @@ const projects: Project[] = [
     id: 1,
     title: 'African Heritage Exhibition',
     description: 'A curated collection showcasing the rich cultural heritage of various African regions through contemporary art.',
-    image: '/thematic-program.jpg',
+    image: '/AIEA/images/thematic-program.jpg',
     category: 'Exhibition',
     year: 2023
   },
@@ -30,7 +30,7 @@ const projects: Project[] = [
     id: 2,
     title: 'Young Artists Workshop Series',
     description: 'A series of workshops aimed at nurturing young artistic talent through mentorship and skill development.',
-    image: '/foster-artistic-talents.jpg',
+    image: '/AIEA/images/foster-artistic-talents.jpg',
     category: 'Education',
     year: 2023
   },
@@ -38,7 +38,7 @@ const projects: Project[] = [
     id: 3,
     title: 'Digital Art Initiative',
     description: 'Exploring the intersection of traditional African art and digital technologies through innovative multimedia projects.',
-    image: '/connect-art-community.jpg',
+    image: '/AIEA/images/connect-art-community.jpg',
     category: 'Digital',
     year: 2022
   },
@@ -46,7 +46,7 @@ const projects: Project[] = [
     id: 4,
     title: 'Community Art Spaces',
     description: 'Creating accessible art spaces in underserved communities to promote artistic expression and cultural engagement.',
-    image: '/promote-art-education.jpg',
+    image: '/AIEA/images/promote-art-education.jpg',
     category: 'Community',
     year: 2022
   },
@@ -54,7 +54,7 @@ const projects: Project[] = [
     id: 5,
     title: 'Art Conservation Program',
     description: 'Preserving significant African artworks through advanced conservation techniques and documentation.',
-    image: '/publications.jpg',
+    image: '/AIEA/images/publications.jpg',
     category: 'Conservation',
     year: 2021
   },
@@ -62,7 +62,7 @@ const projects: Project[] = [
     id: 6,
     title: 'Cross-Cultural Art Exchange',
     description: 'Facilitating artistic exchange between African artists and international counterparts to promote global dialogue.',
-    image: '/about.jpg',
+    image: '/AIEA/images/about.jpg',
     category: 'Collaboration',
     year: 2021
   }

@@ -1,8 +1,12 @@
 'use client';
 
-import Image from 'next/image';
+import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import AnimatedLayout from '@/components/common/AnimatedLayout';
+import { FadeUp, StaggerContainer, StaggerItem } from '@/components/common/AnimatedComponents';
 
 interface Artist {
   id: number;
@@ -17,74 +21,74 @@ interface Artist {
 const artists: Artist[] = [
   {
     id: 1,
-    name: 'Amara Nwosu',
-    country: 'Nigeria',
-    discipline: 'Painting',
-    bio: 'Amara Nwosu is a celebrated painter whose work explores themes of identity, memory, and cultural heritage through vibrant color palettes and bold compositions.',
-    image: '/images/foster-artistic-talents.jpg',
+    name: '张艺谋',
+    country: '中国',
+    discipline: '电影导演',
+    bio: '著名电影导演，代表作《红高粱》《英雄》《影》等。',
+    image: '/AIEA/images/foster-artistic-talents.jpg',
     featured: true
   },
   {
     id: 2,
-    name: 'Kofi Mensah',
-    country: 'Ghana',
-    discipline: 'Sculpture',
-    bio: 'Kofi Mensah creates striking sculptures that combine traditional techniques with contemporary sensibilities, reflecting on Ghana\'s rich artistic heritage.',
-    image: '/images/connect-art-community.jpg',
+    name: '贾樟柯',
+    country: '中国',
+    discipline: '电影导演',
+    bio: '著名电影导演，代表作《小武》《山河故人》《江湖儿女》等。',
+    image: '/AIEA/images/connect-art-community.jpg',
     featured: true
   },
   {
     id: 3,
-    name: 'Zainab Omar',
-    country: 'Kenya',
-    discipline: 'Photography',
-    bio: 'Through her lens, Zainab Omar captures the evolving urban landscapes of East Africa, documenting the intersection of tradition and modernity.',
-    image: '/images/promote-art-education.jpg',
+    name: '王家卫',
+    country: '中国',
+    discipline: '电影导演',
+    bio: '著名电影导演，代表作《重庆森林》《花样年华》《2046》等。',
+    image: '/AIEA/images/promote-art-education.jpg',
     featured: false
   },
   {
     id: 4,
-    name: 'Jean-Claude Bakayoko',
-    country: 'Côte d\'Ivoire',
-    discipline: 'Mixed Media',
-    bio: 'Jean-Claude Bakayoko\'s mixed-media installations challenge viewers to reconsider historical narratives and contemporary social issues.',
-    image: '/images/thematic-program.jpg',
+    name: '娄烨',
+    country: '中国',
+    discipline: '电影导演',
+    bio: '著名电影导演，代表作《苏州河》《春风沉醉的晚上》《推拿》等。',
+    image: '/AIEA/images/thematic-program.jpg',
     featured: false
   },
   {
     id: 5,
-    name: 'Fatima El-Bashir',
-    country: 'Sudan',
-    discipline: 'Digital Art',
-    bio: 'Pioneering the digital art space in Sudan, Fatima El-Bashir creates immersive digital experiences that bridge traditional Sudanese art with new technologies.',
-    image: '/images/latest-news.jpg',
+    name: '毕赣',
+    country: '中国',
+    discipline: '电影导演',
+    bio: '著名电影导演，代表作《路边野餐》《地球最后的夜晚》等。',
+    image: '/AIEA/images/latest-news.jpg',
     featured: true
   },
   {
     id: 6,
-    name: 'David Mwangi',
-    country: 'Kenya',
-    discipline: 'Painting',
-    bio: 'David Mwangi\'s abstract paintings draw inspiration from Kenya\'s natural landscapes, transforming them into contemplative explorations of color and form.',
-    image: '/images/publications.jpg',
+    name: '李安',
+    country: '中国',
+    discipline: '电影导演',
+    bio: '著名电影导演，代表作《卧虎藏龙》《断背山》《少年派的奇幻漂流》等。',
+    image: '/AIEA/images/publications.jpg',
     featured: false
   },
   {
     id: 7,
-    name: 'Nia Diallo',
-    country: 'Senegal',
-    discipline: 'Textile Art',
-    bio: 'Nia Diallo revitalizes traditional West African textile techniques, creating contemporary works that honor ancestral craftsmanship while addressing modern themes.',
-    image: '/images/about.jpg',
+    name: '陈凯歌',
+    country: '中国',
+    discipline: '电影导演',
+    bio: '著名电影导演，代表作《霸王别姬》《无极》《妖猫传》等。',
+    image: '/AIEA/images/about.jpg',
     featured: false
   },
   {
     id: 8,
-    name: 'Malik Ibrahim',
-    country: 'Egypt',
-    discipline: 'Calligraphy',
-    bio: 'Malik Ibrahim\'s calligraphic works blend Arabic script with contemporary design elements, creating visually stunning pieces that speak to both tradition and innovation.',
-    image: '/images/commodity.jpg',
+    name: '冯小刚',
+    country: '中国',
+    discipline: '电影导演',
+    bio: '著名电影导演，代表作《唐人街探案》《我不是潘金莲》等。',
+    image: '/AIEA/images/commodity.jpg',
     featured: false
   }
 ];

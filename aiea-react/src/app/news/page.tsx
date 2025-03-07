@@ -13,40 +13,45 @@ interface NewsItem {
   date: string;
   image: string;
   category: string;
+  link: string;
 }
 
 const newsItems: NewsItem[] = [
   {
     id: 1,
-    title: 'AIEA Art Foundation Launches New Exhibition',
-    excerpt: 'A groundbreaking exhibition featuring works from emerging artists across Africa, showcasing innovative approaches to traditional art forms.',
-    date: 'March 15, 2024',
-    image: '/images/latest-news.jpg',
-    category: 'Exhibition'
+    title: 'AIEA 2024年春季艺术展览即将开幕',
+    excerpt: '本次展览将展示来自全球15个国家的30位艺术家的作品，涵盖绘画、雕塑、摄影和多媒体艺术等多种形式。',
+    date: '2024年2月15日',
+    image: '/AIEA/images/latest-news.jpg',
+    category: '展览',
+    link: '/news/1'
   },
   {
     id: 2,
-    title: 'Annual Art Scholarship Program Opens Applications',
-    excerpt: 'Applications are now open for our annual scholarship program, offering funding and mentorship to promising young artists from underrepresented communities.',
-    date: 'February 28, 2024',
-    image: '/images/connect-art-community.jpg',
-    category: 'Education'
+    title: '艺术家驻留计划2024年申请现已开放',
+    excerpt: '我们的年度艺术家驻留计划现已开放申请，提供为期三个月的工作室空间和创作资源支持。',
+    date: '2024年2月10日',
+    image: '/AIEA/images/connect-art-community.jpg',
+    category: '项目',
+    link: '/news/2'
   },
   {
     id: 3,
-    title: 'Partnership Announced with National Museum',
-    excerpt: 'AIEA Art Foundation is proud to announce a new partnership with the National Museum, bringing African art to wider audiences.',
-    date: 'January 20, 2024',
-    image: '/images/promote-art-education.jpg',
-    category: 'Partnership'
+    title: '新增青少年艺术教育工作坊',
+    excerpt: '面向13-18岁青少年的新艺术教育工作坊将于3月启动，涵盖数字艺术、绘画和雕塑等多个领域。',
+    date: '2024年2月5日',
+    image: '/AIEA/images/promote-art-education.jpg',
+    category: '教育',
+    link: '/news/3'
   },
   {
     id: 4,
-    title: 'Artist Spotlight: Nala Mensah',
-    excerpt: 'Meet Nala Mensah, whose thought-provoking installations have been making waves in the contemporary art scene across West Africa and beyond.',
-    date: 'January 10, 2024',
-    image: '/images/foster-artistic-talents.jpg',
-    category: 'Artist Spotlight'
+    title: 'AIEA与国际艺术机构建立新合作伙伴关系',
+    excerpt: '我们很高兴宣布与三家国际艺术机构建立新的合作伙伴关系，将共同开展展览交流和艺术家交换项目。',
+    date: '2024年1月28日',
+    image: '/AIEA/images/foster-artistic-talents.jpg',
+    category: '公告',
+    link: '/news/4'
   }
 ];
 
@@ -111,7 +116,7 @@ export default function NewsPage() {
                       transition={{ duration: 0.2 }}
                     >
                       <Link 
-                        href={`/news/${item.id}`} 
+                        href={item.link} 
                         className="inline-block text-black font-medium border-b border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors"
                       >
                         Read More

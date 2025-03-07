@@ -34,6 +34,9 @@ const ProjectCard = ({ title, href, className = '', bgImage }: ProjectCardProps)
 };
 
 const ProjectsGrid = () => {
+  // 确保图片路径前缀正确
+  const imagePrefix = process.env.NODE_ENV === 'production' ? '/AIEA' : '';
+  
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -44,7 +47,7 @@ const ProjectsGrid = () => {
               title="Thematic Program" 
               href="/programs"
               className="h-full"
-              bgImage="/images/thematic-program.jpg"
+              bgImage={`${imagePrefix}/images/thematic-program.jpg`}
             />
           </div>
           
@@ -54,7 +57,7 @@ const ProjectsGrid = () => {
               title="Latest News" 
               href="/news"
               className="h-full"
-              bgImage="/images/latest-news.jpg"
+              bgImage={`${imagePrefix}/images/latest-news.jpg`}
             />
           </div>
           
@@ -64,7 +67,7 @@ const ProjectsGrid = () => {
               title="Publications" 
               href="/publications"
               className="h-full"
-              bgImage="/images/publications.jpg"
+              bgImage={`${imagePrefix}/images/publications.jpg`}
             />
           </div>
           
@@ -74,7 +77,7 @@ const ProjectsGrid = () => {
               title="About the Foundation" 
               href="/about"
               className="h-full"
-              bgImage="/images/about.jpg"
+              bgImage={`${imagePrefix}/images/about.jpg`}
             />
           </div>
           
@@ -84,7 +87,7 @@ const ProjectsGrid = () => {
               title="Commodity" 
               href="/shop"
               className="h-full"
-              bgImage="/images/commodity.jpg"
+              bgImage={`${imagePrefix}/images/commodity.jpg`}
             />
           </div>
         </div>

@@ -5,6 +5,9 @@ import AnimatedLayout from '@/components/common/AnimatedLayout';
 import { FadeUp, FadeRight, FadeLeft, ScaleIn } from '@/components/common/AnimatedComponents';
 import { motion } from 'framer-motion';
 
+// 添加图片路径前缀
+const imagePrefix = process.env.NODE_ENV === 'production' ? '/AIEA' : '';
+
 export default function AboutPage() {
   return (
     <AnimatedLayout>
@@ -85,7 +88,7 @@ export default function AboutPage() {
               <div className="space-y-8">
                 <div className="aspect-video relative rounded-lg overflow-hidden">
                   <Image 
-                    src="/images/about.jpg" 
+                    src={`${imagePrefix}/images/about.jpg`}
                     alt="AIEA Art Foundation Team" 
                     fill 
                     className="object-cover"
